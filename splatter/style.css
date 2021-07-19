@@ -1,0 +1,21 @@
+#splatterCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+#user-profile-view *:not(#splatterCanvas) {
+  z-index: 1;
+}
+
+.sl-subtitle {
+  text-shadow:
+    -2px -2px 0 #fff,
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff;;
+}
