@@ -26,8 +26,10 @@ if (screen && screen.orientation && screen.orientation.angle) {
 // window.addEventListener("deviceorientation", handleOrientation, true);
 
 window.addEventListener('devicemotion', function(event) {
-  xAcc = event.accelerationIncludingGravity.x;
-  yAcc = event.accelerationIncludingGravity.y;
+  if (event && event.accelerationIncludingGravity && typeof event.accelerationIncludingGravity.x === 'number') {
+    xAcc = event.accelerationIncludingGravity.x;
+    yAcc = event.accelerationIncludingGravity.y;
+  }
 }, true);
 
 function setupCanvas(canvas, w, h) {
