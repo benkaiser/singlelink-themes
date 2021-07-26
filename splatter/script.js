@@ -1,7 +1,7 @@
-const slbg = document.getElementById('user-profile-view');
+const body = document.body;
 const canvas = document.createElement('canvas');
 canvas.setAttribute('id', 'splatterCanvas');
-slbg.insertBefore(canvas, slbg.firstChild);
+body.insertBefore(canvas, body.firstChild);
 
 var ctx=canvas.getContext('2d');
 var fx = document.getElementById('sound');
@@ -14,16 +14,6 @@ var screenOrientation = 0;
 if (screen && screen.orientation && screen.orientation.angle) {
   screenOrientation = screen.orientation.angle;
 }
-
-// function handleOrientation(event) {
-//   beta = Math.floor(Math.ceil(event.beta, -90), 90);
-//   gamma = event.gamma;
-//   console.log('Beta: ' + beta);
-//   console.log('Gamma: ' + gamma);
-
-//   // Do stuff with the new orientation data
-// }
-// window.addEventListener("deviceorientation", handleOrientation, true);
 
 window.addEventListener('devicemotion', function(event) {
   if (event && event.accelerationIncludingGravity && typeof event.accelerationIncludingGravity.x === 'number') {

@@ -8,8 +8,16 @@
   z-index: 0;
 }
 
-#user-profile-view *:not(#splatterCanvas) {
+#user-profile-view {
   z-index: 1;
+}
+
+.sl-bg {
+  background-color: rgba(0,0,0,0);
+}
+
+h1.sl-headline, h3.sl-subtitle {
+  color: #000;
 }
 
 .sl-subtitle {
